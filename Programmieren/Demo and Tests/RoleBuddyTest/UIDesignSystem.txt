@@ -1,0 +1,206 @@
+Design System for Role and Task Management System
+
+1. Color Palette
+
+Primary Colors:
+- Primary Blue: #3B82F6 (Used for primary actions, key UI elements)
+- Secondary Indigo: #6366F1 (Used for secondary actions, accents)
+- Tertiary Teal: #14B8A6 (Used for highlights, special features)
+
+Neutral Colors:
+- Dark Gray: #1F2937 (Primary text color)
+- Medium Gray: #6B7280 (Secondary text, icons)
+- Light Gray: #E5E7EB (Borders, dividers)
+- Off-White: #F9FAFB (Background color)
+- White: #FFFFFF (Card backgrounds, contrasting elements)
+
+Semantic Colors:
+- Success Green: #10B981
+- Warning Amber: #F59E0B
+- Error Red: #EF4444
+- Info Sky Blue: #0EA5E9
+
+2. Typography
+
+Font Family:
+- Primary: 'Inter', sans-serif (For all UI text)
+
+Font Sizes:
+- Heading 1: 30px (1.875rem)
+- Heading 2: 24px (1.5rem)
+- Heading 3: 20px (1.25rem)
+- Heading 4: 18px (1.125rem)
+- Body Text: 16px (1rem)
+- Small Text: 14px (0.875rem)
+- Micro Text: 12px (0.75rem)
+
+Font Weights:
+- Regular: 400
+- Medium: 500
+- Semi-Bold: 600
+- Bold: 700
+
+Line Heights:
+- Headings: 1.2
+- Body Text: 1.5
+- Small Text: 1.4
+
+3. Spacing System
+
+Use a 4px grid system for consistent spacing:
+- Extra Small: 4px (0.25rem)
+- Small: 8px (0.5rem)
+- Medium: 16px (1rem)
+- Large: 24px (1.5rem)
+- Extra Large: 32px (2rem)
+- 2X Large: 48px (3rem)
+
+4. Layout
+
+Grid System:
+- Use Tailwind CSS's built-in grid system
+- Default gap: 16px (1rem)
+
+Breakpoints:
+- Mobile: 0 - 639px
+- Tablet: 640px - 1023px
+- Desktop: 1024px and above
+
+5. Components
+
+Buttons:
+- Primary Button:
+  - Background: Primary Blue
+  - Text: White
+  - Padding: 10px 16px
+  - Border Radius: 6px
+- Secondary Button:
+  - Background: White
+  - Text: Primary Blue
+  - Border: 1px solid Primary Blue
+  - Padding: 10px 16px
+  - Border Radius: 6px
+- Tertiary Button (Text Button):
+  - Background: Transparent
+  - Text: Primary Blue
+  - Padding: 10px 16px
+
+Input Fields:
+- Height: 40px
+- Border: 1px solid Light Gray
+- Border Radius: 6px
+- Padding: 8px 12px
+- Focus State: 2px solid Primary Blue
+
+Dropdown:
+- Similar to Input Fields, with added chevron icon
+
+Checkboxes and Radio Buttons:
+- Size: 18px x 18px
+- Checked State: Primary Blue
+
+Toggle Switch:
+- Width: 44px
+- Height: 22px
+- Thumb Size: 18px
+- Off State: Light Gray
+- On State: Primary Blue
+
+Cards:
+- Background: White
+- Border Radius: 8px
+- Box Shadow: 0 1px 3px rgba(0, 0, 0, 0.1)
+- Padding: 16px
+
+Modals:
+- Background: White
+- Border Radius: 8px
+- Box Shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+- Padding: 24px
+
+Tooltips:
+- Background: Dark Gray
+- Text: White
+- Border Radius: 4px
+- Padding: 6px 10px
+
+6. Icons
+
+- Use Heroicons (https://heroicons.com/)
+- Size: 24px x 24px for standard icons, 16px x 16px for small icons
+- Color: Inherit from text color or specified in the design
+
+7. Animations and Transitions
+
+- Use subtle animations for state changes and interactions
+- Standard transition duration: 150ms
+- Easing function: ease-in-out
+
+8. Accessibility
+
+- Ensure color contrast ratios meet WCAG 2.1 AA standards
+- Provide focus states for all interactive elements
+- Use semantic HTML elements
+- Include proper ARIA attributes where necessary
+
+9. Dark Mode
+
+Provide a dark mode option with adjusted colors:
+- Background: #111827
+- Surface: #1F2937
+- Primary Blue: #60A5FA
+- Text: #F9FAFB (on dark backgrounds), #111827 (on light backgrounds)
+
+10. Data Visualization
+
+Task Lists and Role Assignments:
+- Use consistent color coding for different task categories or role types
+- Implement clear hierarchy in list views
+- Provide interactive elements for sorting, filtering, and expanding details
+
+11. Specific UI Elements
+
+Role Management:
+- Use cards or list items to display roles
+- Include quick-action buttons for edit and delete operations
+- Show associated tasks and persons in a collapsible view
+
+Task Management:
+- Implement a kanban-style board for task status visualization
+- Use tags or badges to indicate task properties (e.g., priority, category)
+- Include a detailed view for each task with all relevant information
+
+Person Management:
+- Display persons in a grid or list view with avatars
+- Show associated roles and tasks for each person
+- Implement a quick-assign feature for roles
+
+Import/Export:
+- Provide clear upload area for CSV imports
+- Show progress and validation feedback during import process
+- Offer customizable export options (e.g., select fields, date range)
+
+Visualization Module:
+- Implement responsive charts and graphs for task and role analytics
+- Use consistent color coding across different visualizations
+- Provide interactive elements for data exploration
+
+12. Responsive Design Principles
+
+- Use Tailwind CSS's responsive classes for adaptive layouts
+- Implement a collapsible sidebar for navigation on smaller screens
+- Ensure touch targets are at least 44x44 pixels on mobile devices
+
+13. Writing Style and Tone
+
+- Use clear, concise language throughout the interface
+- Maintain a professional yet approachable tone
+- Be consistent with terminology related to roles, tasks, and persons
+
+14. Empty States and Error Handling
+
+- Design informative empty states for lists and dashboards
+- Create clear error messages with guidance on how to resolve issues
+- Use illustrations or icons to make empty states and errors more engaging
+
+This design system provides a foundation for creating a consistent, modern, and user-friendly interface for the Role and Task Management System. It aligns with the specified technology stack (React, Tailwind CSS) and addresses the key features and requirements outlined in the system goals and architecture description.
