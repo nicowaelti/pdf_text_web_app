@@ -1,7 +1,7 @@
 import { Box, Text, useColorModeValue } from '@chakra-ui/react';
 import { usePDFStore } from '../../store/pdf.store';
 
-export const TextContent = () => {
+export const TextContent: React.FC = () => {
   const document = usePDFStore(state => state.document);
   const { currentPage, zoom } = usePDFStore(state => state.navigation);
 
@@ -13,20 +13,20 @@ export const TextContent = () => {
   }
 
   const currentPageContent = document.pages[currentPage - 1];
-  const { width, height } = currentPageContent.metadata;
-
+  const { width: actualWidth, height: actualHeight } = currentPageContent.metadata;
+  const items = currentPageContent.lines.flatMap(line => line.items);
+  
   return (
     <Box
       bg={bgColor}
       p={6}
       borderRadius="md"
       shadow="sm"
-      width={`${width * zoom}px`}
-      height={`${height * zoom}px`}
-      overflow="auto"
+      width={`${actualWidth * zoom}px`}
+      height={`${actualHeight * zoom}px`}
       position="relative"
       mx="auto"
-      transition="all 0.2s"
+      overflow="auto"
     >
       <Box
         position="absolute"
@@ -37,19 +37,37 @@ export const TextContent = () => {
           transformOrigin: 'top left'
         }}
       >
-        <Text
-          color={textColor}
-          whiteSpace="pre-wrap"
-          fontFamily="monospace"
-          fontSize="sm"
-          sx={{
-            WebkitUserSelect: 'text',
-            userSelect: 'text',
-            cursor: 'text'
-          }}
-        >
-          {currentPageContent.text}
-        </Text>
+        {items.map((item, index) => {
+          const [a, b, c, d, e, f] = item.transform; // Destructure full transform matrix
+
+          // Adjust the 'f' value for the inverted Y-axis in HTML/CSS
+          const adjustedF = actualHeight - f;
+
+          // Apply the full transform matrix directly using CSS transform
+          // The matrix includes scaling, skewing, rotation, and translation (e, f)
+          return (
+            <Text
+              key={index}
+              position="absolute"
+              style={{
+                fontFamily: item.fontName,
+                fontSize: '0.8px', // Use a base font size, scaling is handled by the matrix
+                transform: `matrix(${a}, ${b}, ${c}, ${d}, ${e}, ${adjustedF})`, // Apply full matrix transform with adjusted f
+                transformOrigin: 'top left', // Set transform origin to top left
+                whiteSpace: 'pre',
+                padding: 0,
+                margin: 0,
+                lineHeight: '1',
+                color: textColor,
+                width: 'auto',
+                height: 'auto',
+                overflow: 'visible'
+              }}
+            >
+              {item.str}
+            </Text>
+          );
+        })}
       </Box>
     </Box>
   );

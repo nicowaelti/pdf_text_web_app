@@ -19,8 +19,22 @@ export interface PDFPageMetadata {
   rotation: number;
 }
 
+export interface PDFTextItem {
+  str: string;
+  transform: any[]; // [scaleX, skewX, skewY, scaleY, offsetX, offsetY] - Using any[] to match pdfjs-dist type
+  fontName: string;
+  width: number;
+  height: number;
+  dir: string; // 'ltr' or 'rtl'
+}
+
+export interface PDFTextLine {
+  items: PDFTextItem[];
+  // Add properties for line bounding box or position if needed later
+}
+
 export interface PDFPageContent {
-  text: string;
+  lines: PDFTextLine[];
   metadata: PDFPageMetadata;
 }
 

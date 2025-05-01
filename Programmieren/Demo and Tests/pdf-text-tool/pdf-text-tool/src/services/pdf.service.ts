@@ -1,8 +1,17 @@
 import type { PDFDocumentProxy } from 'pdfjs-dist';
-import { PDFDocument, PDFError, PDFLoadResult, PDFPageContent, PDFPageMetadata } from '../types/pdf.types';
+import { PDFDocument, PDFError, PDFLoadResult, PDFPageContent, PDFPageMetadata, PDFTextItem, PDFTextLine } from '../types/pdf.types';
 
 // Initialize PDF.js worker
 window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+
+interface PDFTextItemCandidate {
+  str: string;
+  transform: number[];
+  fontName: string;
+  width: number;
+  height: number;
+  dir: string;
+}
 
 export class PDFService {
   private static createError(type: PDFError['type'], message: string, details?: unknown): PDFError {
@@ -41,6 +50,24 @@ export class PDFService {
     }
   }
 
+  // Type guard to check if an item is a PDFTextItem
+  private static isPDFTextItem(item: unknown): item is PDFTextItem {
+    const candidate = item as PDFTextItemCandidate;
+    return (
+      typeof item === 'object' &&
+      item !== null &&
+      'str' in candidate &&
+      'transform' in candidate &&
+      Array.isArray(candidate.transform) &&
+      candidate.transform.length === 6 &&
+      candidate.transform.every((t: unknown) => typeof t === 'number') &&
+      'fontName' in candidate &&
+      'width' in candidate &&
+      'height' in candidate &&
+      'dir' in candidate
+    );
+  }
+
   private static async extractPages(pdf: PDFDocumentProxy): Promise<PDFPageContent[]> {
     const pages: PDFPageContent[] = [];
 
@@ -48,6 +75,7 @@ export class PDFService {
       try {
         const page = await pdf.getPage(i);
         const viewport = page.getViewport({ scale: 1.0 });
+        const textContent = await page.getTextContent();
         
         const metadata: PDFPageMetadata = {
           pageNumber: i,
@@ -56,16 +84,58 @@ export class PDFService {
           rotation: viewport.rotation,
         };
 
-        const textContent = await page.getTextContent();
-        const text = textContent.items
-          .map(item => 'str' in item ? item.str : '')
-          .join(' ')
-          .trim();
+        const filteredItems = textContent.items.filter(this.isPDFTextItem) as PDFTextItem[];
+        const textItems = filteredItems.map((item: PDFTextItem) => ({
+          ...item,
+          // Removed aggressive rounding of transform values
+        }));
 
-        pages.push({
-          text,
-          metadata,
+        // Group text items into lines based on vertical proximity
+        const lines: PDFTextLine[] = [];
+        const yTolerance = 2; // Tolerance for vertical grouping (adjust as needed)
+
+        // Sort items primarily by vertical position (descending) and secondarily by horizontal position (ascending)
+        const sortedItems = [...textItems].sort((a, b) => {
+          const yDiff = b.transform[5] - a.transform[5];
+          if (Math.abs(yDiff) > yTolerance) {
+            return yDiff;
+          }
+          return a.transform[4] - b.transform[4];
         });
+
+        let currentLine: PDFTextItem[] = [];
+
+        sortedItems.forEach((item, index) => {
+          if (currentLine.length === 0) {
+            currentLine.push(item);
+          } else {
+            const lastItem = currentLine[currentLine.length - 1];
+            const yDiff = Math.abs(item.transform[5] - lastItem.transform[5]);
+            const xDiff = item.transform[4] - lastItem.transform[4];
+            const lastItemWidth = Math.abs(lastItem.transform[0] * lastItem.width); // Estimate width
+
+            // Check if the item is on the same line based on vertical proximity and horizontal position
+            if (yDiff < yTolerance && xDiff > -lastItemWidth * 0.5) { // Allow for slight horizontal overlap
+              currentLine.push(item);
+            } else {
+              // New line
+              lines.push({ items: currentLine });
+              currentLine = [item];
+            }
+          }
+
+          // Add the last line after the loop
+          if (index === sortedItems.length - 1 && currentLine.length > 0) {
+            lines.push({ items: currentLine });
+          }
+        });
+
+        // Sort items within each line by horizontal position
+        lines.forEach(line => {
+          line.items.sort((a, b) => a.transform[4] - b.transform[4]);
+        });
+
+        pages.push({ lines, metadata });
       } catch (error: unknown) {
         throw this.createError('PARSE_ERROR', `Failed to parse page ${i}`, error);
       }
