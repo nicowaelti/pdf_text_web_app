@@ -1,0 +1,84 @@
+{
+  "sub_chapter_id": "2.4",
+  "title": "Focus on Use Case Preperation",
+  "sections": [
+    {
+      "section_id": "00001",
+      "subtitle": "Autonomous creating a Literature Review",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Defining the Scope and Research Questions: How can the agent help in formulating clear and focused research questions for the literature review?",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Identifying Relevant Sources: Strategies for searching academic databases, evaluating source credibility, and filtering irrelevant results.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "Information Extraction and Summarization: Techniques for extracting key information (e.g., methods, results, conclusions) from research papers and generating concise summaries.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Synthesizing Information and Identifying Gaps: How can the agent connect different ideas from multiple papers and identify areas where further research is needed? This is a key aspect of a good literature review.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00005",
+          "text": "Structuring and Writing the Literature Review: Outlining, paragraph organization, citation management, and generating coherent text.",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "section_id": "00002",
+      "subtitle": "Evaluation of good Literature",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Criteria for Evaluating Research Papers: Methodology, results, discussion, impact, novelty, etc. How does the agent assess the quality of research papers?",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Metrics for Assessing the Quality of a Literature Review: Completeness, coherence, critical analysis, etc. How will you evaluate the output of your agent?",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "Bias Detection in Literature: How can the agent help in identifying potential biases in research studies?",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "section_id": "00003",
+      "subtitle": "Specific Challenges of Automating Literature Reviews with AI:",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Understanding Complex Research Methodologies: Can AI truly grasp the nuances of different research designs and their limitations?",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Dealing with Paywalled Content: Strategies for accessing and processing information from behind paywalls (ethically and practically).",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "Handling Different Citation Styles: Ensuring consistency and accuracy in referencing.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Searching and comparing (feature based comparison /not quality assessment) different AI-Literature (Deep Research) Tools.",
+          "citations": []
+        }
+      ]
+    }
+  ]
+}

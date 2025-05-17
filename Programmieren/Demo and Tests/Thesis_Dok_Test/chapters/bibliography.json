@@ -1,0 +1,213 @@
+{
+  "resolved_citations": [
+    {
+      "citation_id": "CIT001",
+      "author": "Anthropic",
+      "year": 2024,
+      "title": "Building effective agents",
+      "journal": "Building Effective Agents",
+      "doi": "https://www.anthropic.com/research/building-effective-agents"
+    },
+    {
+      "citation_id": "CIT002",
+      "author": "AutoGPT",
+      "year": 2024,
+      "title": "Everything You Need to Know About the AutoGPT Platform",
+      "journal": "Everything You Need to Know About the AutoGPT Platform",
+      "doi": "https://autogpt.net/everything-you-need-to-know-about-the-autogpt-platform/"
+    },
+    {
+      "citation_id": "CIT003",
+      "author": "AWS",
+      "year": null,
+      "title": "Was ist RAG? – Retrieval Augmented Generation erklärt",
+      "journal": "Amazon Web Services, Inc.",
+      "doi": "https://aws.amazon.com/de/what-is/retrieval-augmented-generation/"
+    },
+    {
+      "citation_id": "CIT004",
+      "author": "Dresch, A., Lacerda, D., & Antunes Júnior, J. A. V.",
+      "year": 2014,
+      "title": "Design Science Research: A Method for Science and Technology Advancement",
+      "journal": "Design Science Research: A Method for Science and Technology Advancement",
+      "doi": "10.1007/978-3-319-07374-3"
+    },
+    {
+      "citation_id": "CIT005",
+      "author": "Godsey, B.",
+      "year": 2024,
+      "title": "How Knowledge Graph RAG Boosts LLM Results",
+      "journal": "DataStax",
+      "doi": "https://www.datastax.com/blog/how-knowledge-graph-rag-boosts-llm-results"
+    },
+    {
+      "citation_id": "CIT006",
+      "author": "Hevner, A., R, A., March, S., T, S., Park, Park, J., Ram, & Sudha",
+      "year": 2004,
+      "title": "Design Science in Information Systems Research",
+      "journal": "Management Information Systems Quarterly",
+      "doi": ""
+    },
+    {
+      "citation_id": "CIT007",
+      "author": "Krishnan, N.",
+      "year": 2025,
+      "title": "AI Agents: Evolution, Architecture, and Real-World Applications",
+      "journal": "arXiv",
+      "doi": "10.48550/arXiv.2503.12687"
+    },
+    {
+      "citation_id": "CIT008",
+      "author": "Larson, J.",
+      "year": 2024,
+      "title": "GraphRAG: A new approach for discovery using complex information",
+      "journal": "Microsoft Research Blog",
+      "doi": "https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/"
+    },
+    {
+      "citation_id": "CIT009",
+      "author": "Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W., Rocktäschel, T., Riedel, S., & Kiela, D.",
+      "year": 2021,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "journal": "arXiv",
+      "doi": "10.48550/arXiv.2005.11401"
+    },
+    {
+      "citation_id": "CIT010",
+      "author": "Lin, S., Hilton, J., & Evans, O.",
+      "year": 2022,
+      "title": "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
+      "journal": "arXiv",
+      "doi": "10.48550/arXiv.2109.07958"
+    },
+    {
+      "citation_id": "CIT011",
+      "author": "Liu, Y., Deng, G., Li, Y., Wang, K., Wang, Z., Wang, X., Zhang, T., Liu, Y., Wang, H., Zheng, Y., & Liu, Y.",
+      "year": 2024,
+      "title": "Prompt Injection attack against LLM-integrated Applications",
+      "journal": "arXiv",
+      "doi": "10.48550/arXiv.2306.05499"
+    },
+    {
+      "citation_id": "CIT012",
+      "author": "Matsumoto, N., Choi, H., Moran, J., Hernandez, M. E., Venkatesan, M., Li, X., Chang, J.-H., Wang, P., & Moore, J. H.",
+      "year": 2025,
+      "title": "ESCARGOT: An AI agent leveraging large language models, dynamic graph of thoughts, and biomedical knowledge graphs for enhanced reasoning",
+      "journal": "Bioinformatics (Oxford, England)",
+      "doi": "10.1093/bioinformatics/btaf031"
+    },
+    {
+      "citation_id": "CIT013",
+      "author": "OpenAI",
+      "year": 2022,
+      "title": "Introducing ChatGPT",
+      "journal": "Introducing ChatGPT",
+      "doi": "https://openai.com/index/chatgpt/"
+    },
+    {
+      "citation_id": "CIT014",
+      "author": "Peoples, N., Østbye, T., & Yan, L. L.",
+      "year": 2023,
+      "title": "Burden of proof: Combating inaccurate citation in biomedical literature",
+      "journal": "BMJ",
+      "doi": "10.1136/bmj-2023-076441"
+    },
+    {
+      "citation_id": "CIT015",
+      "author": "Shen, Y., Song, K., Tan, X., Li, D., Lu, W., & Zhuang, Y.",
+      "year": 2023,
+      "title": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
+      "journal": "Thirty-seventh Conference on Neural Information Processing Systems",
+      "doi": "https://openreview.net/forum?id=yHdTscY6Ci"
+    },
+    {
+      "citation_id": "CIT016",
+      "author": "Silva, M.",
+      "year": 2023,
+      "title": "Retrieval augmented generation: Keeping LLMs relevant and current - Stack Overflow",
+      "journal": "Retrieval Augmented Generation: Keeping LLMs Relevant and Current",
+      "doi": "https://stackoverflow.blog/2023/10/18/retrieval-augmented-generation-keeping-llms-relevant-and-current/"
+    },
+    {
+      "citation_id": "CIT017",
+      "author": "Singh, M., Niranjan, A., Gupta, D., Bakshi, N. A., Mukherjee, A., & Goyal, P.",
+      "year": 2017,
+      "title": "Citation sentence reuse behavior of scientists: A case study on massive bibliographic text dataset of computer science",
+      "journal": "arXiv",
+      "doi": "10.48550/arXiv.1705.02499"
+    },
+    {
+      "citation_id": "CIT018",
+      "author": "Xu, Z., Cruz, M. J., Guevara, M., Wang, T., Deshpande, M., Wang, X., & Li, Z.",
+      "year": 2024,
+      "title": "Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering",
+      "journal": "Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval",
+      "doi": "10.1145/3626772.3661370"
+    },
+    {
+      "citation_id": "CIT019",
+      "author": "Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y.",
+      "year": 2023,
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "journal": "arXiv",
+      "doi": "10.48550/arXiv.2210.03629"
+    },
+    {
+      "citation_id": "CIT020",
+      "author": "Liu, B., Li, X., Zhang, J., Wang, J., He, T., Hong, S., Liu, H., Zhang, S., Song, K., Zhu, K., Cheng, Y., Wang, S., Wang, X., Luo, Y., Jin, H., Zhang, P., Liu, O., Chen, J., Zhang, H., Yu, Z., Shi, H., Li, B., Wu, D., Teng, F., Jia, X., Xu, J., Xiang, J., Lin, Y., Liu, T., Liu, T., Su, Y., Sun, H., Berseth, G., Nie, J., Foster, I., Ward, L., Wu, Q., Gu, Y., Zhuge, M., Tang, X., Wang, H., You, J., Wang, C., Pei, J., Yang, Q., Qi, X., & Wu, C.",
+      "year": 2025,
+      "title": "Advances and Challenges in Foundation Agents From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems",
+      "journal": "arXiv",
+      "doi": ""
+    },
+    {
+      "citation_id": "CIT021",
+      "author": "Zhou, J., Lu, Q., Chen, J., Zhu, L., Xu, X., Xing, Z., & Harrer, S.",
+      "year": 2024,
+      "title": "A Taxonomy of Architecture Options for Foundation Model-based Agents: Analysis and Decision Model",
+      "journal": "arXiv",
+      "doi": "2408.02920"
+    }
+  ],
+  "unresolved_citations": [
+    {
+      "citation_text": "(Svensson & Keller, 2024)"
+    },
+    {
+      "citation_text": "(Russell and Norvig, 1995)"
+    },
+    {
+      "citation_text": "(Wooldridge and Jennings, 1995)"
+    },
+    {
+      "citation_text": "(Kotseruba & Tsotsos, 2018, Yu et al., 2024)"
+    },
+    {
+      "citation_text": "(Yuan et al., 2022; , (Kobuki et al., 2023)"
+    },
+    {
+      "citation_text": "(Chen et al., 2017)"
+    },
+    {
+      "citation_text": "(Chohan et al., 2021)"
+    },
+    {
+      "citation_text": "(Kovač et al., 2024)"
+    },
+    {
+      "citation_text": "(Lee et al., 2020; , Ruan et al., 2022)"
+    },
+    {
+      "citation_text": "(Zarzà et al., 2023)"
+    },
+    {
+      "citation_text": "(Lewis & Sarkadi, 2023)"
+    },
+    {
+      "citation_text": "(Vila et al., 2022)"
+    },
+    {
+      "citation_text": "(Ray, 2024)"
+    }
+  ]
+}

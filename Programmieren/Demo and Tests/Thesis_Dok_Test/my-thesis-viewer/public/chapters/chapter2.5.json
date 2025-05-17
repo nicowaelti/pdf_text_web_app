@@ -1,0 +1,51 @@
+{
+  "sub_chapter_id": "2.5",
+  "title": "Research Gap Analysis",
+  "sections": [
+    {
+      "section_id": "00000",
+      "subtitle": "Overview",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Gemäss Andreas am Schluss ein Kapitel und ein Verweis zum Gap in der Introduction.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Despite significant advancements in foundation-model-based agent systems, a notable gap persists in the comprehensive analysis and standardization of agent architecture options. For example, the AIOS platform integrates LLMs to create a cohesive environment for autonomous agents [19], however, it does not address the need for a standardized approach to defining agent roles and capabilities comprehensively. Similarly, while the MAToM-SNN framework leverages spiking neural networks for enhanced multi-agent cooperation and competition, it too lacks a unified taxonomy that would standardize these systems [20]. Moreover, IBM’s initiatives underscore the challenges of integrating LLMs into automation frameworks but fall short in offering a standardized framework that clearly defines agent roles and capabilities [21].",
+              "citation": "CIT022",
+              "relevance": 95,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Meanwhile, recent research studies underscore diverse challenges and advancements in LLM-based autonomous agents. One survey highlights the extensive use of LLMs in autonomous agent frameworks, focusing on how these models enhance agent intelligence and functionality but criticizes the lack of standardized architectures necessary for integration [22]. Another study highlights how advancements in prompting techniques enhance model efficiency, yet overlook the need for architectural standardization [23]. Additional work reviews progress and challenges in the field of multi-agent systems enhanced by LLMs, emphasizing the need for a standardized framework to integrate these systems cohesively [24]. Researchers in [25] explore the capabilities of LLMs to simulate human-like decision-making, emphasizing the need for more robust frameworks to support the scalability and ethical deployment of such technologies. Moreover, the study investigated workflows and components in LLM agents suggesting potential efficiencies but lacking unified architectural integration [26]. These studies point out the necessity for comprehensive design architecture that can evaluate and systematically integrate these technologies into existing and new systems.",
+              "citation": "CIT022",
+              "relevance": 93,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Our work aims to fill this gap by offering a detailed taxonomy-based design architecture, ensuring a holistic and systematic approach to integrating these advanced technologies into scalable and ethically responsible systems.",
+              "citation": "CIT022",
+              "relevance": 90,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Foundation model-based agents are gaining increasing attention in various domains. However, researchers and developers face architectural challenges when designing these agents. Our previous work demonstrated a reference architecture to present an overview of agent design [40], while in this study, we provided a comprehensive taxonomy that categorizes foundation-model-based agents, addressing issues of standardization and enhancing our understanding of their various types and functionalities. By detailing how agents function across different roles and situations, this classification aids in designing more effective and adaptable agent system architectures, reducing clutter in the field and streamlining design and deployment processes. Our taxonomy also offers valuable insights into architectural options, enabling better integration and interoperability across different systems.",
+              "citation": "CIT022",
+              "relevance": 90,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

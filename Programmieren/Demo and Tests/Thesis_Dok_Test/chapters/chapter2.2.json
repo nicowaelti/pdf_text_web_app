@@ -1,0 +1,287 @@
+{
+  "sub_chapter_id": "2.2",
+  "title": "2.2 AI System Architectures",
+  "sections": [
+    {
+      "section_id": "00001",
+      "subtitle": "Agent Architecture Overview",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Frage: Soll ich die Frameworks/Technologien auch bereits vergleichen (Stärken / Schwächen) und auf Nützlichkeit / Relevanz beurteilen? Evtl. bereits entscheiden, welche Technologien/Komponenten für die Design-Phase in Frage kommen, resp. für den Vergleich verwendet werden können.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Workflows, Multi Agent Systems,",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "One core issue in the LLM era is thelack of a unified frameworkthat integrates the rich cognitive and functional components required by advanced agents. While LLMs offer exceptional language reasoning capabilities, many current agent designs remainad hoc—they incorporate modules like perception, memory, or planning in a piecemeal fashion, failing to approximate the well-coordinated specialization seen in biological systems such as the human brain.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "Unlike current LLM agents, the human brain seamlessly balances perception, memory, reasoning, and action through distinct yet interconnected regions, facilitating adaptive responses to complex stimuli. LLM-driven agents, by contrast, often stumble when tasks require cross-domain or multimodal integration, highlighting the need for a more holistic approach akin to the brain’s functional diversity.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "The composition of agent models is crucial for optimizing performance and scalability in agent-based systems. Various configurations can be adopted depending on the complexity and requirements of the system. A single-model agent handles all tasks, which is suitable for simpler systems with a limited scope. This approach minimizes complexity but may not scale well for diverse tasks [24, 32]. In more complex systems, multi-model configurations are often employed. Multiple models are used to handle different tasks or to enhance performance. One approach is the mixture of experts, where different models specialize in different tasks, and the system dynamically selects the appropriate model for each task [33]. Another approach is the ensemble method, where multiple models work together to improve accuracy and robustness by combining their outputs [34]. Additionally, model merging involves combining different models to create a more capable composite model, such as merging language models and visual recognition models for a comprehensive virtual assistant [35]. A hybrid model combines various types of models, such as rule-based and learning-based models, to leverage their respective strengths. This approach is used in cybersecurity systems that employ rule-based detection for known threats and machine learning models for anomaly detection [36].",
+              "citation": "CIT021",
+              "relevance": 90,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Workflow in foundation model-based agents can be organized into two designs: centralized and decentralized workflow. Centralized workflow concentrates task management at a single control point, enhancing operational consistency but potentially leading to bottlenecks—a scenario similar to centralized coordination in agent systems (refer to agent coordination section IV-G1). In contrast, decentralized workflow spreads task control across multiple agents, increasing system flexibility and resilience, reflecting principles found in distributed coordination strategies. Significantly, workflow is dedicated to the procedural execution of tasks, which is distinct from strategic planning (section IV-F) and the focus on inter-agent interactions characteristic of agent coordination.",
+              "citation": "CIT021",
+              "relevance": 95,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "https://www.anthropic.com/research/building-effective-agents - This provides a good starting point for understanding agent architectures and workflows.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Motivated by these parallels, our survey advocates drawing inspiration from the human brain to systematically analyze and design agent frameworks. This perspective shows that biological systems achieve general intelligence by blending specialized components (for perception, reasoning, action, etc.) in a tightly integrated fashion—an approach that could serve as a blueprint for strengthening current LLM-based agents.",
+              "citation": "CIT020"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "00002",
+      "subtitle": "GenAI Agents, Existing Frameworks, Limitations",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Survey of Existing Frameworks: LangChain, AutoGen, Hugging Face Agents, etc. Compare their features, capabilities, and limitations, specifically in the context of research tasks or literature review.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Challenges in Agent Coordination and Communication: This is a key limitation in multi-agent systems, particularly relevant to your focus on complex processes.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "Evaluation Metrics for GenAI Agents: How do we assess their performance, reliability, and safety? This is important for later comparisons.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Trends and Best Practices for Implementations: What are the current best practices for building and deploying GenAI agents?",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "section_id": "00003",
+      "subtitle": "Cognitive Architectures",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Different Types of Cognitive Architectures: SOAR, ACT-R, LIDA, etc. Analyze their principles, strengths, weaknesses, and suitability for your use case (integrating diverse AI components for literature review). Include a clear comparison table/matrix.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "This survey provides a comprehensive overview, framing intelligent agents within a modular, brain-inspired architecture that integrates principles from cognitive science, neuroscience, and computational research.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "We structure our exploration into four interconnected parts. First, we delve into themodular foundation of intelligent agents, systematically mapping their cognitive, perceptual, and operational modules onto analogous human brain functionalities, and elucidating core components such as memory, world modeling, reward processing, and emotion-like systems.",
+              "citation": "CIT020"
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Review ACT-R, Soar, CLARION, focusing on how procedural and declarative memory, chunking, and production rules model human-like cognitive processes, and how these could be leveraged for literature review.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "The Role of Memory (working, episodic, semantic) in Cognitive Architectures: How do these memory systems influence agent behavior, and how can they be used to improve the agent's ability to understand and synthesize research?",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Incorporating GenAI within Cognitive Architectures: Explore how GenAI models (like LLMs) can be integrated into these architectures to enhance their capabilities. This is a key point for your \"hybrid\" approach.",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "section_id": "00004",
+      "subtitle": "Autonomous Systems, Planning",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Different Approaches to Planning in AI: Classical planning, hierarchical task networks (HTNs), reinforcement learning-based planning, etc. Explain these approaches and their relevance to literature review.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Neuroscientific research reveals that the brain leverages bothrational circuits(e.g., the neocortex, enabling deliberation and planning) andemotional circuits(e.g., the limbic system) to guide decision-making.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "Reasoning, Planning, and Decision-Making (Prefrontal Cortex).Finally, the human prefrontal cortex integrates information from memory, sensory inputs, emotions, and reward pathways to carry out higher-order cognitive processes—such as logical reasoning, planning, and executive control [29,30].",
+              "citation": "CIT020"
+            },
+            {
+              "text": "The Planning engine serves as a central component in foundation-model-based agents, orchestrating the high-level planning activities necessary for strategic operations. This engine is crucial for enabling agents to process reasoning, generate plans, monitor their execution, and adapt dynamically to new inputs and environmental shifts, enhancing the agents’ effectiveness and adaptability in diverse settings [65, 68, 69]. This can be divided into two primary strategies: Internal planner and external planner, each addressing different operational needs within the system. Internal planners are embedded within the agent’s core architecture and utilize the agent’s intrinsic capabilities to autonomously generate and execute plans. External planners incorporate specialized, domain-specific tools that extend the basic functionalities of the planning engine to tackle complex, high-stakes tasks requiring detailed and precise planning [70]. These planners enhance the system’s planning capabilities by translating intricate task descriptions into structured action sequences, which are then executed by the agents’ foundational models. This not only ensures robust plan formulation but also adapts the execution strategies to meet the specific demands of the tasks.",
+              "citation": "CIT021",
+              "relevance": 90,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "In the planning process, selecting tools is essential for ensuring that agents have instant access to the necessary resources for efficient task execution. This list typically includes both internal and external tools, each playing a crucial role in the agent’s architecture. Internal tools are tools and algorithms developed within the system to optimize performance and provide tailored solutions to operational challenges. Internal tools can include proprietary large language models (LLMs) and specific algorithms designed to handle unique tasks efficiently [44, 59]. Databases and knowledge bases form a robust backbone for agents, offering access to extensive repositories of structured data essential for tasks requiring comprehensive analytical capabilities [59, 73]. External tools extend the agent’s capabilities beyond its inherent functions by allowing seamless interaction with external data sources and services. APIs facilitate this interaction, enabling the agent to access and utilize data from various external sources [59]. Additionally, external models are employed for specific tasks that demand specialized computational expertise. These models integrate cutting-edge algorithms to enhance the agent’s problem-solving abilities and are typically used for more complex tasks involving multiple APIs [74]. By integrating both internal and external tools into the architecture, agents can achieve a higher level of flexibility and efficiency in task execution.",
+              "citation": "CIT021",
+              "relevance": 87,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "To achieve the user’s goal, the agent needs to translate the outcomes of the reasoning process into actionable steps. And accordingly, develop a plan [75]. This component is designed to operationalize the theoretical insights and strategies formulated during the reasoning phase into a coherent sequence of steps that guide the agent toward achieving specific objectives. There are two primary design options for plan generation: single-path plan generator, and multi-path plan generator. Single-path plan generator creates a linear, straightforward plan that directs the agent from the start to the finish of a task without deviation. It follows a step-by-step methodology, ideal for tasks with predictable outcomes and clear procedures. The single-path approach ensures a focused and direct route to the goal, minimizing the possibility of errors and inefficiencies in execution [76]. Multi-path plan generator offering a more complex and adaptable planning solution, the multi-path plan generator devises several potential routes to achieve the goal [77, 78]. It allows the agent to dynamically adjust the steps in the plan based on new information or changes in the environment, thus enhancing its flexibility and effectiveness in uncertain scenarios.",
+              "citation": "CIT021",
+              "relevance": 89,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Challenges in Real-world Planning: Uncertainty, partial observability, dynamic environments. Discuss how these challenges manifest in the context of literature review.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "Integrating Planning with GenAI: How can GenAI models be used for more flexible and adaptive planning in the literature review process?",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Explainable Planning: How can the agent explain the decisions it took?",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "section_id": "00005",
+      "subtitle": "Multi-Agent vs. Single-Agent Systems for Complex Processes",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "This section directly addresses the multi-agent aspect of your thesis.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Third, we examinecollaborative and evolutionary multi-agent systems, investigating the collective intelligence emerging from agent interactions, cooperation, and societal structures, highlighting parallels to human social dynamics.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "Collaborative Multi-Agent Structure:It can operate within multi-agent or agent society structures, collaboratively forming teams or communities of agents that collectively accomplish complex tasks and goals beyond individual capabilities.",
+              "citation": "CIT020"
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Define different types of sub-agents and their potential roles in an autonomous literature review system (e.g., a \"retrieval agent,\" a \"summarization agent,\" a \"planning agent,\" a \"synthesis agent\").",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "In foundation-model-based agent systems, the roles of agents are crucial as they define the functions and interactions within the system. The agents can be categorized into two types: agent-as-a-coordinator and agent-as-a-worker. Agents in the coordinator role primarily formulate high-level strategies and orchestrate the execution of tasks by delegating task execution responsibilities to other agents, external tools, or non-agent systems, ensuring that tasks are allocated efficiently and that the system operates cohesively [8]. On the other hand, agents in the worker role need to generate strategies and execute specific tasks in line with those strategies [71]. They are the core executors and can be designed to operate autonomously or semi-autonomously based on predefined rules or learning algorithms. To complete these tasks, agents in the worker role may need to cooperate or compete with other agents, or call external tools or non-agent AI/non-AI systems.",
+              "citation": "CIT021",
+              "relevance": 92,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Agent communication strategies are crucial for the effective operation of multi-agent systems, as they dictate how agents share information and collaborate. There are several levels of communication transparency that can be implemented, each with its own advantages and trade-offs. Full transparency: All information is openly shared among agents. This maximizes cooperation and ensures that all agents have the same level of information, which can be particularly beneficial in collaborative environments. For instance, in a research setting where multiple agents are working together to solve complex problems, full transparency allows all agents to access and build upon each other’s findings. However, full transparency can lead to information overload and may not be suitable for environments where privacy and security are critical concerns [83]. Partial transparency: Goal-based sharing: Information is shared only if it is relevant to achieving specific goals. For example, in a project management system, team members might only see tasks and data relevant to their specific objectives [24, 81]. Role-based sharing: Information is shared based on the roles and responsibilities of each agent [24, 84]. This is common in corporate environments where different agents have access to different levels of information. Sensitive data withholding: Sensitive information is withheld to protect privacy and security. This approach is crucial in scenarios where data sensitivity is high, and privacy regulations must be strictly followed [83]. Context-aware sharing: Information sharing is adapted based on the context and current state of the system. For instance, agents utilize intrinsic context such as their own historical data and goals, alongside extrinsic context including user preferences, other agents’ behaviors, and systemic norms, to enhance decision-making [85].",
+              "citation": "CIT021",
+              "relevance": 93,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "Compare centralized vs. decentralized control mechanisms for coordinating these sub-agents, drawing on existing multi-agent system literature. Discuss the trade-offs.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "At the runtime stage, agent coordination mechanisms ensure that agents work together effectively, avoiding conflicts and redundancies. Centralized coordination involves a central agent or system managing the coordination of all agents [24, 79, 80]. This approach provides strong oversight but can become a bottleneck, particularly in large-scale systems. Federated coordination is managed in a decentralized manner, with each agent handling its own coordination while still communicating with others [8]. Fully distributed coordination, on the other hand, involves no central coordinator; all agents coordinate directly with each other, often using peer-to-peer communication protocols [24, 81, 82]. These coordination strategies are essential for ensuring that multi-agent systems operate efficiently and effectively. They help in managing dependencies, synchronizing actions, and resolving conflicts among agents. Each approach has its advantages and trade-offs in terms of efficiency, scalability, and complexity. Selecting the appropriate coordination mechanism depends on the specific requirements and constraints of the system.",
+              "citation": "CIT021",
+              "relevance": 95,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Discuss common conflict resolution strategies in multi-agent systems (e.g., negotiation, voting, priority-based systems) and how they could be applied to literature review.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00005",
+          "text": "Present models (even conceptual or borrowed from other papers) of how multi-agent coordination could work for literature review, specifically addressing the challenges of this task.",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "section_id": "00006",
+      "subtitle": "Current State of Hybrid AI Agent Systems Architecture and Frameworks",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "This section is crucial for providing a comprehensive overview of the existing landscape.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Summary of recent papers/projects showcasing hybrid systems (specifically those relevant to complex tasks or, ideally, literature review).",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "By synthesizing modular AI architectures with insights from different disciplines, this survey identifies key research gaps, challenges, and opportunities, encouraging innovations that harmonize technological advancement with meaningful societal benefit.",
+              "citation": "CIT020"
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "Clear articulation of the limitations and challenges identified in the literature. This sets up the problem statement.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Discussion of the gap between theory (what should be possible with hybrid systems) and practice (what's actually been achieved).",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00005",
+          "text": "Brief case studies (even if they're just summaries of papers) of both successes and failures. This provides concrete examples.",
+          "citations": []
+        }
+      ]
+    }
+  ]
+}

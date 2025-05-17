@@ -1,0 +1,362 @@
+{
+  "sub_chapter_id": "2.1",
+  "title": "2.1 AI Agents: Concepts, Architectures, and Components",
+  "sections": [
+    {
+      "section_id": "00001",
+      "subtitle": "Defining Agentic AI",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Agentic AI refers to systems that autonomously operate within a defined environment, embodying characteristics like proactivity, reactivity, and the capability to interact with surrounding elements. Agency in AI emphasizes the autonomy of systems to make decisions based on their perceptions rather than relying solely on external instructions. Specifically, agentic systems are designed to assess their environment, respond to stimuli accordingly, and execute actions that align with predefined goals (Svensson & Keller, 2024). This capability is particularly crucial in domains where response timing and environmental adaptation significantly enhance performance outcomes, such as in collaborative human-AI relationships (Li et al., 2024).",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "The advent of large language models (LLMs) has catalyzed a transformative shift in artificial intelligence, paving the way for advanced intelligent agents capable of sophisticated reasoning, robust perception, and versatile action across diverse domains.",
+              "citation": "CIT020"
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "The term AI agent was not defined by a single publication but rather evolved over time through various contributions in artificial intelligence research. One of the most influential sources in shaping the concept was written by Russell and Norvig (1995), which introduced a systematic framework for understanding agents as entities that perceive their environment and act rationally to achieve goals. It formalized the agent concept through the agent function, agent program, and the PEAS framework. Complementing this, Wooldridge and Jennings (1995) provided a comprehensive theoretical foundation in their paper, defining key agent characteristics such as autonomy, social ability, reactivity, and proactiveness, and distinguishing between different types of agents in the context of multi-agent systems. Together, these works significantly shaped the modern understanding and application of AI agents.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Artificial Intelligence (AI) has long been driven by humanity’s ambition to create entities that mirror human intelligence, adaptability, and purpose-driven behavior. The roots of this fascination trace back to ancient myths and early engineering marvels... Over the decades, AI has evolved from symbolic systems reliant on predefined logic to machine learning models... This progression reached a new frontier with the advent of large language models (LLMs)... Central to these advancements is the concept of the “agent”, a system that not only processes information but also perceives its environment, makes decisions, and acts autonomously.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "The concept of “agent” is a cornerstone of modern AI, representing a system that perceives its environment, makes decisions, and takes actions to achieve specific goals. This idea, while formalized in AI in the mid-20th century... One of the most widely cited definitions, proposed by [3], describes an agent as “anything that can be viewed as perceiving its environment through sensors and acting upon that environment through actuators”... The historical development of agents parallels the evolution of AI itself... The agent paradigm emerged as a response to these limitations... Rodney Brooks’s subsumption architecture... Agents have since become a versatile framework across AI subfields... By integrating perception, reasoning, and action into a cohesive structure, the agent paradigm has consistently served as a bridge between theoretical AI constructs and practical applications...",
+              "citation": "CIT020"
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "A critical distinction between agentic AI and passive AI models lies in their operational frameworks. Goal-oriented AI agents are endowed with clear objectives and the ability to choose actions based on their understanding of the environment, contrasting with foundational models like base LLMs that primarily focus on language prediction and generation without an inherent capacity for task completion or proactive engagement (Li et al., 2024). While LLMs excel in generating coherent and contextually relevant text, they lack the active decision-making processes and functional goals that characterize agentic systems.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Non-AI-based agents oper- ate without employing artificial intelligence techniques. They typically rely on predefined scripts, workflows, or simple automation rules that do not involve learning or adapting over time. Non-AI-based agents are effective in environments where tasks are repetitive and straightforward, as they execute tasks exactly as specified by their programming. While they are fragile and sensitive to the input. An example of a non- AI-based agent is a basic automation script that processes incoming emails and sorts them into different folders based on predefined keywords.",
+              "citation": "CIT021",
+              "relevance": 75,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "The definition of an AI agent varies significantly across different sources, reflecting diverse perspectives on their core functionalities and applications. These definitions range from foundational concepts of perceiving environments and acting to achieve goals, to more specialized views emphasizing human interaction, collaborative roles in specific domains like healthcare or IT, cognitive capabilities, and considerations like user privacy or predictability.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "For AI-based agents, we consider two types in terms of their purposes: narrow AI-based agents and general purpose AI (GPAI)-based agents. Narrow AI-based agents are designed to perform specific tasks or solve particular problems. These agents use machine learning and other AI techniques to improve their performance in their specialized domains [29]. These agents are effective within their domains but lack generalization capabilities. GPAI-based agents aim to perform various tasks across different domains. They are designed with broader capabilities, leveraging extensive datasets and sophisticated algorithms to adapt to multiple environments and challenges [30, 31]. GPAI-based agents can switch between tasks, learn from diverse experiences, and apply their knowledge to new, unforeseen problems, making them more versatile compared to narrow AI agents. This adaptability is achieved through advanced architectures and continuous learning mechanisms, which enable GPAI-based agents to update their models and improve over time.",
+              "citation": "CIT021",
+              "relevance": 80,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00005",
+          "text": "Despite their nature as technical tools, the frameworks used to define and describe Artificial Intelligence (AI) agents are notably diverse. These definitional approaches often originate from a broad spectrum of fields, encompassing both technical and non-technical disciplinary perspectives. Conversely, influential industry actors, including large technology firms like Microsoft and Anthropic, typically emphasize technical attributes, such as agent capabilities and system architecture, in their characterizations. Krishnan (2025) highlights that definitions of AI agents are varying significantly, depending on their specific capabilities and architecture. Unlike conventional AI systems, which typically operate within predefined constraints and necessitate explicit instructions for task execution, AI agents demonstrate significant autonomy in goal-oriented behavior. This architectural distinction, as conceptualized by Microsoft (Ray, 2024), positions agents as superstructural layers interacting with foundational language models; they engage in observation, data acquisition, model input provision, and collaborative action plan generation. This is supported similarly by Anthropic, which categorize AI Workflows and AI Agents, depending on their degree of freedom and summarize both categories as AI Agent systems. such a configuration empowers agents with advanced functionalities, including the decomposition of complex problems into manageable sub-tasks, reasoning over available information, strategic tool utilization, learning from feedback mechanisms, and maintaining contextual coherence across interactions.",
+          "citations": ["CIT007", "CIT001"]
+        },
+        {
+          "paragraph_id": "00006",
+          "text": "In the following Table the used concepts are summarized and counted to better see the focus points of the definitions.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00007",
+          "text": "The Table systematically breaks down the components of AI agent definitions found in the literature. It organizes these components into conceptual categories, shows their relative frequency based on references, and provides illustrative keywords and concepts for each category, ranging from an often-used Human-AI Interaction concept to lesser used Explainability concept.",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "section_id": "00002",
+      "subtitle": "Evolution of Agent Architectures",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "The architectural evolution of AI agents, particularly leveraging LLMs, has progressed from relatively static models to dynamic frameworks that integrate tools and feedback loops. Standalone LLMs are limited by their fixed knowledge base and inability to act autonomously; they merely generate text outputs based on learned patterns without context-specific adaptability (Li et al., 2024). This limitation necessitated the development of architectures enabling interactions with external resources, such as API calls or prompting systems, to introduce flexibility and responsiveness in agent behavior (Kotseruba & Tsotsos, 2018, Yu et al., 2024).",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "The advent of large language models (LLMs) has redefined the capabilities of agents, transforming their role in artificial intelligence and opening up new horizons for their applications. Agents, once confined to executing narrowly defined tasks or following rigid rule-based frameworks, now leverage the broad generalization, reasoning, and adaptability of models like OpenAI’s ChatGPT [7]... These LLM-powered agents have evolved from static systems into dynamic entities capable of processing natural language, reasoning across complex domains, and adapting to novel situations with remarkable fluency.",
+              "citation": "CIT020"
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "The definition of \"LLM Agent\" architecture emphasizes a continuous loop of reasoning, action selection, and observation. In such architectures, agents utilize LLMs to formulate responses while concurrently evaluating the consequences of their actions in a feedback-driven manner. Influential frameworks incorporate mechanisms for reasoning and decision-making within agentic processes, establishing a foundation for subsequent advancements, including enhanced understanding and operational effectiveness in complex environments (Li et al., 2024).",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "The integration of Retrieval-Augmented Generation (RAG) represents a substantial enhancement in agent grounding. By accessing external, contemporary, or proprietary information before response generation, agents equipped with RAG can provide more accurate and contextually relevant outputs. The \"Agent with RAG\" architecture illustrates a scenario wherein retrieval is a selectable tool within the agent's operational loop, contributing to a significant increase in reliability and effectiveness in diverse applications (Yuan et al., 2022; , (Kobuki et al., 2023).",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Models that incorporate knowledge graphs, such as \"Agent with Graph-based RAG,\" represent a notable progression in sophistication. These architectures leverage structured knowledge to facilitate enhanced performance, allowing agents to navigate complex datasets and infer relationships effectively. This has implications for various applications, including strategic decision-making and collaborative tasks within multi-agent frameworks (Chen et al., 2017).",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "section_id": "00003",
+      "subtitle": "Core Components and Design Patterns in Agentic Systems",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Central to constructing capable AI agents are the functional modules defining their operational capabilities. Planning capabilities embedded within agent architectures include task decomposition, goal management, and strategic thinking, which help agents effectively manage complex tasks and varied objectives (Chohan et al., 2021). Reasoning mechanisms, such as logical deduction, chain-of-thought patterns, and causal inference, enable agents to interpret information and make informed decisions, enhancing their effectiveness in varied contexts (Kovač et al., 2024).",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "...elucidating core components such as memory, world modeling, reward processing, and emotion-like systems.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "A key advancement in the LLM era is the seamless integration of language understanding with actionable capabilities. Modern LLMs, equipped with function-calling APIs, enable agents to identify when external tools or systems are required, reason about their usage, and execute precise actions to achieve specific goals... This dynamic combination of abstract reasoning and concrete execution allows agents to bridge the gap between cognitive understanding and real-world action.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "Modality defines whether an agent operates using a single modality or multiple modalities. Single-modality agents utilize one type of input such as text, vision, or audio, making them ideal for straightforward tasks that require less computational resources and simpler data interpretation. For instance, text-based chatbots or vision-only surveillance systems operate within this single modality [27]. In contrast, multi-modality agents combine video/audio/image/text inputs uploaded by humans, and understand the operational and environmental context, enabling a more comprehensive and rich interaction with their environment. This enhanced capability allows them to handle more complex tasks like autonomous navigation or interactive virtual assistants that respond not only to voice commands but also to visual and contextual cues. This approach not only facilitates richer user interactions but also aligns with the evolving demands of dynamic environments where adaptability and context awareness are crucial [28].",
+              "citation": "CIT022",
+              "relevance": 85,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Agents typically establish goals like task completion, communication, and learning, which then guide the planning and action phases. Task completion goals mean where agents are programmed to achieve specific, complex objectives, such as crafting items in virtual environments like Minecraft [44] or executing specific functions during software development [46]. These tasks are clearly defined with each action strategically aligned towards achieving the outcome. Secondly, communication goals involve agents engaging in interactions with other agents or humans to exchange information or collaborate on joint tasks. For instance, agents within platforms like ChatDev may coordinate efforts in software development [46], while agents like those in Inner Monologue adapt their strategies based on real-time human feedback, showcasing their adaptive communication capabilities [72]. Lastly, learning goals are identified where agents aim to navigate and adapt to unfamiliar settings, balancing between exploration of new areas and exploitation of known resources. An example of this can be seen in agents like Voyager [44], which explore and refine skills through continual feedback and adjustment processes.",
+              "citation": "CIT021",
+              "relevance": 88,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "In the capabilities of foundation- model-based agent systems, the reasoning process is a crucial component that utilizes cognitive steps and logical frameworks to tackle complex problems. The reasoning process bridges perception and action by enabling informed high-level decision-making and plan generation.",
+              "citation": "CIT021",
+              "relevance": 85,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Agents also require efficient memory systems to manage both short-term contexts and long-term knowledge. Short-term context management involves understanding conversation histories and immediate observations, often constrained by token limits in LLMs. For long-term memory storage, technologies such as vector stores, databases, and graph structures enable agents to recall interactions and acquired knowledge, enriching the learning process and facilitating more informed decision-making (Lee et al., 2020; , Ruan et al., 2022).",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Neuroscientific research reveals that the brain leverages bothrational circuits... andemotional circuits... to guide decision-making. Memory formation involves the hippocampus and cortical mechanisms, while reward signals... reinforce behavior and learning. These biological insights inspire several design principles for AI agents...",
+              "citation": "CIT020"
+            },
+            {
+              "text": "Temporal Lobe: Language, Memory, and Auditory ProcessingThe temporal lobes facilitateauditory processing(L1),language comprehension(L1),memory formation(L2), andsemantic understanding(L2) [16]... However, robustepisodic memoryandlifelong learning capabilities remain limited, with AI systems frequently encountering issues like catastrophic forgetting.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "Context management focuses on gathering and organizing the context within which the agent operates to better understand the user’s intentions and goals [27]. There are various of context types of information, such as screen recordings [53], mouse clicks, typing patterns, eye tracking, gestures [54], and annotations. These types of context information are crucial for accurately interpreting user goals. When it comes to goal seeking, there are two methods: passive suggestion and proactive suggestion. Passive suggestion analyzes goals explicitly articulated by the user through text prompts submitted via a dialogue interface [55, 56]. In contrast, the proactive suggestion goes beyond explicit text prompts by interpreting the user interface of relevant tools and interactions, using multimodal context information to anticipate user goals [54]. From an architectural perspective, passive suggestions offer straightforward goal interpretation, while proactive suggestions use rich context information for more accurate predictions, providing diverse options for developing adaptable and intelligent systems.",
+              "citation": "CIT021",
+              "relevance": 88,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "A crucial aspect of agent functionality is the ability to select, parameterize, and invoke external tools, such as APIs or search engines. Architectural considerations must ensure that agents can trigger these tools effectively and integrate their outputs into the operational framework cohesively (Zarzà et al., 2023). For agency in complex environments, agents must adeptly perceive and interact with both digital and physical surroundings, allowing them to navigate multifaceted scenarios effectively (Kobuki et al., 2023).",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Parietal Lobe: Spatial Processing and Multisensory IntegrationThe parietal lobes integrate multisensory inputs, facilitatingattention(L2), spatialorientation(L2), andsensorimotor coordination(L2) [16]... AI research in robotics and computer vision addresses similar challenges... Nonetheless, AI still lacks the seamless and real-time integration seen in humans. Furthermore, detailed tactile perception(L3) remains largely unexplored...",
+              "citation": "CIT020"
+            },
+            {
+              "text": "Occipital Lobe: Visual ProcessingSpecialized invisual perception(L1)... AI excels in basic visual recognition tasks... However, advanced capabilities such as contextualscene understanding(L2) and abstract visual reasoning remain challenging and are only moderately developed.",
+              "citation": "CIT020"
+            },
+            {
+              "text": "Tool Interface: foundation-model-based agents can lever- age APIs and UI understanding to interact with external tools and resources. Using APIs, these agents can directly call specific functions or retrieve data from other systems, ensuring seamless integration and efficient performance [25, 57, 58, 59]. APIs provide a standardized way for agents to access a wide range of functionalities, from retrieving real-time data to executing complex operations, thus enhancing their adaptability and robustness in various applications. On the other hand, UI understanding enables agents to interact with tools and applications through their graphical interfaces [60]. This approach is particularly useful when APIs are unavailable or insufficient [60, 61]. By analyzing visual elements, screen recordings, mouse clicks, and user interactions, agents can comprehend and navigate UIs to achieve their goals. This dual capability of using APIs and UI understanding allows foundation-model-based agents to operate effectively in diverse environments, improving their flexibility and operational efficiency.",
+              "citation": "CIT021",
+              "relevance": 92,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Tool User Type: In the architecture of foundation-model- based agents, the ability to discover and integrate tools is crucial for enhancing adaptability. This involves considering different types of tool users, such as agents themselves or human users. The user experience- driven tools are tailored to evolve based on direct user interactions, significantly improving usability and overall user satisfaction [62, 63]. Such advancements are pivotal in shaping how agents interact in user-centric environments. For example, such as those documented by Google, underscore the potential of user feedback to refine AI tools dynamically, making them more intuitive and aligned with user needs [64]. On the other hand, agent experience driven tools harness historical data to refine and optimize operational strategies continuously [65, 66]. This methodology is particularly beneficial in environments characterized by variability and change, enhancing the agent’s decision-making processes and operational efficiency.",
+              "citation": "CIT021",
+              "relevance": 85,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Tool Learning: Tool learning emphasizes how agents acquire new tool usage capabilities. This process can be categorized into API-based learning and UI-based learning. In API-based learning, agents learn to use tools by interacting with APIs. This involves understanding and executing programmatic instructions, which enhances their functionality and efficiency [59]. In UI-based learning, agents learn to use tools by reading and interpreting UI interfaces. For instance, UTA (Universal Tool for Agents) exemplifies this approach by traversing UI elements to build a graph and subsequently learning how to use the tools through these interactions [67].",
+              "citation": "CIT021",
+              "relevance": 90,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Tool calling is a fundamental capability of foundation-model-based agents at the action stage, enabling them to access and manipulate a variety of external tools dynamically. Tool invocation involves methods that allow agents to interact with external tools either through Configuration-free invocation or Customizable invocation approaches. Configuration-free invocation enables agents to utilize tools via predefined interfaces without needing adjustments to the tools’ configurations. This seamless and swift integration is ideal for routine operations, where standardization is crucial for efficiency. For instance, agents may use APIs for real-time data retrievals like weather or stock prices, leveraging methods described in tuning-free approaches to enhance parameter identification without manual tuning [86]. Customizable invocation involves agents dynamically adjusting the tools’ parameters or modifying their processing strategies to optimize performance tailored to specific tasks [87]. This method is beneficial in environments requiring high precision and adaptability. Output Integration: Within tool calling, explicitly incorporating outputs from external tools into the agent’s decision-making process is crucial. Inline integration allows agents to directly use the outputs of tools in their workflows, ensuring quick and efficient task execution [59, 68]. Meanwhile, multi-source integration involves synthesizing outputs from multiple tools or combining these with the agent’s internal data. This synthesis is critical for tasks requiring deep analysis and comprehensive responses, as it allows the agent to provide nuanced and context-aware outputs [58].",
+              "citation": "CIT021",
+              "relevance": 94,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Among the foundational design patterns, the Reason-Act (ReAct) pattern interleaves thought processes with actions, enabling agents to alternate between reasoning and execution dynamically. Reflection or self-critique patterns further allow agents to evaluate past actions to enhance future performance, emphasizing continuous improvement (Lewis & Sarkadi, 2023). Other prevalent patterns in agent design include Plan-and-Execute frameworks and collaborative mechanisms for multi-agent cooperation, which establish structured approaches to achieving shared goals while optimizing resource allocation and operational efficiency (Vila et al., 2022).",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Actuation [88] refers to the capability of an agent to take actions that affect the physical or digital environment. Physical actuation involves robotic movements and manipulations, such as a robot performing assembly tasks in a factory. Virtual actuation includes actions within software environments, such as automated data entry or network configuration changes. Effective actuation requires the development of sophisticated actuators and robust integration with control systems. For example, in autonomous vehicles, actuation encompasses steering, braking, and acceleration, all coordinated by AI to ensure safe and efficient travel.",
+              "citation": "CIT021",
+              "relevance": 86,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "In the reflection process of foundation-model-based agents, several key artifacts ensure effective traceability and observability. These artifacts can be categorized into three design options: workflow/plan generation, intermediate result, and final output. By providing feedback at different stages, we can ensure that not only the final output is correct, but also the intermediate processes. Workflow/plan generation involves the initial setup of goals, user inputs, prompts, and the overall planning steps that the agent will follow. Documenting these elements ensures that the agent has all the necessary information for decision-making and that its actions are aligned with intended objectives[89]. During this stage, feedback can be provided on the comprehensiveness and accuracy of the workflow, ensuring that the foundation for subsequent processes is solid. The intermediate result includes the documentation of reasoning processes, planning steps, and tool use during the agent’s operation. It involves logging intermediate decisions, actions, and outputs generated by the agent throughout its workflow. Feedback at this stage focuses on the correctness and rationality of these intermediate steps, ensuring that the process leading to the final output is valid and transparent [68]. The final output comprises the final results produced by the agent, which are directly evaluated against the goals and expectations set in the workflow/plan stage. Feedback here ensures that the output meets the desired criteria and accurately reflects the agent’s intended actions and decisions.",
+              "citation": "CIT021",
+              "relevance": 91,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Evaluation and feedback mechanisms in foundation-model-based agents are essential for assessing performance and ensuring reliability. These mechanisms can be structured into three primary design options: quantitative metrics, qualitative assessments, and hybrid approaches. Quantitative metrics involve measurable indicators such as accuracy, response time, and success rates, providing objective data for performance analysis [90]. Qualitative assessments focus on subjective elements like user satisfaction, ethical alignment, and contextual appropriateness, often gathered through user feedback or expert reviews [91]. Hybrid approaches combine both, offering a balanced evaluation that leverages data-driven insights alongside human judgment. This multifaceted evaluation ensures agents are not only efficient but also adaptable and aligned with real-world applications.",
+              "citation": "CIT021",
+              "relevance": 89,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Despite advancements, foundation-model-based agents face several challenges that hinder their widespread adoption. Key issues include scalability in dynamic environments, where agents must handle increasing complexity without performance degradation; ethical concerns, such as bias in decision-making and privacy violations; and interoperability, ensuring seamless integration with existing systems. Future directions should focus on robust error-handling mechanisms, enhanced security protocols, and interdisciplinary collaborations to address these gaps. For instance, developing adaptive learning algorithms could mitigate scalability issues, while regulatory frameworks might alleviate ethical risks [92].",
+              "citation": "CIT021",
+              "relevance": 87,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "In conclusion, the taxonomy of architecture options for foundation-model-based agents provides a comprehensive framework for understanding and developing advanced AI systems. By addressing the outlined challenges and leveraging future directions, researchers and practitioners can create more robust, ethical, and efficient agents [93]. This framework not only synthesizes existing knowledge but also guides future innovations, ensuring that agents evolve in alignment with societal needs and technological advancements.",
+              "citation": "CIT021",
+              "relevance": 85,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00005",
+          "text": "In conclusion, the landscape of AI agents has evolved significantly, with advancements in architecture and core components that enable agents to exhibit higher levels of autonomy, adaptability, and efficacy. The integration of LLMs and structured methodologies underscores the growing sophistication of these systems, reinforcing the importance of constant innovation in the field of artificial intelligence.",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "section_id": "00004",
+      "subtitle": "Agent Memory: RAG, Vector DB, Graph DB, Graph RAG",
+      "paragraphs": [
+        {
+          "paragraph_id": "00001",
+          "text": "Detailed Analysis of RAG: How does it work? What are its limitations (e.g., hallucination, retrieval accuracy)? This deep dive into RAG is essential as it's a core component.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Temporal Lobe: Language, Memory, and Auditory ProcessingThe temporal lobes facilitateauditory processing(L1),language comprehension(L1),memory formation(L2), andsemantic understanding(L2) [16]... However, robustepisodic memoryandlifelong learning capabilities remain limited, with AI systems frequently encountering issues like catastrophic forgetting.",
+              "citation": "CIT020"
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00002",
+          "text": "Comparison of Vector DBs and Graph DBs: When is each more appropriate for knowledge representation in AI, specifically for literature review tasks? This comparison is key to justifying the use of a graph database.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "In the foundation-model-based agent systems, several distinctive structures offer unique advantages and serve as pivotal design options depending on specific application needs. Natural language memory, as used in systems like Reflexion [43] and Voyager [44], provides a flexible format that stores information in an easily understandable form, facilitating intuitive interaction and preserving rich semantic details to guide agent actions. Embedding memory, exemplified by MemoryBank [45] and ChatDev, encapsulates memory information into compact embedding vectors, significantly enhancing the efficiency of memory retrieval processes. Databases allow for robust memory manipulation; systems like ChatDB [46] and DB-GPT [47] use databases to enable precise memory operations through SQL queries, providing structured and efficient data management. Structured lists are employed in models such as GITM [48] and RET-LLM [49], where memory is systematically organized in lists or hierarchical structures that clearly define the relationships between elements and facilitate rapid data access. Each format presents distinct advantages: natural language for clarity and semantic richness, embeddings for retrieval speed, databases for structured manipulation, and lists for organized and hierarchical memory storage. These memory formats can be integrated, as demonstrated by GITM, which uses a hybrid approach combining key-value pairs with embeddings and natural language to maximize retrieval efficiency and content comprehensiveness, providing multiple design options to optimize agent performance based on the specific needs of the application.",
+              "citation": "CIT022",
+              "relevance": 89,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00003",
+          "text": "Hybrid Approaches Combining Vector and Graph Databases: Explore the potential of combining these database types for more sophisticated knowledge representation and reasoning. For example, Neo4j has started to introduce Vector Indexes. This is directly relevant to the \"hybrid\" aspect of the thesis.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00004",
+          "text": "Semantic Search and its Relationship to RAG and these DBs: Define and analyze how semantic search is facilitated by these technologies and how it benefits literature retrieval.",
+          "citations": []
+        },
+        {
+          "paragraph_id": "00005",
+          "text": "Memory management in foundation-model-based agents involves different types of memory. Long-term memory retains information over long periods, essential for tasks requiring historical data, knowledge, past observations, and experiences. Short-term memory handles information relevant to immediate tasks, useful for temporary activities like configuration, working context, recent events, and information within the context window of the foundation model. Selective forgetting enables agents to discard irrelevant or outdated information, crucial in dynamic environments where data relevance changes rapidly.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Memory management is critical for foundation-model-based agents to store, retrieve, and utilize information effectively.",
+              "citation": "CIT022",
+              "relevance": 85,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            },
+            {
+              "text": "Memory Types: Long-term memory retains information over long periods, which is essential for tasks that require historical data, knowledge, past observations, and past experiences [37, 38]. Short-term memory, on the other hand, handles short-term information relevant to immediate tasks [39]. This type of memory is useful for temporary activities that do not require long-term storage, for example, configuration, working context, recent events, and the information within the context window of the FM [40]. Selective forgetting enables agents to discard irrelevant or outdated information, ensuring that they maintain optimal performance without being bogged down by unnecessary data [41, 42]. This capability is crucial in dynamic environments where the relevance of data changes rapidly.",
+              "citation": "CIT022",
+              "relevance": 92,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        },
+        {
+          "paragraph_id": "00006",
+          "text": "Memory operations allow agents to acquire, accumulate, and utilize knowledge through interactions with their environment. Memory reading involves extracting valuable information based on recency, relevance, and importance. Memory writing focuses on storing perceived environmental information while managing duplication and preventing overflow. Memory reflection enables agents to summarize and infer high-level insights from past experiences, facilitating more abstract decision-making. Memory sharing allows agents to access and contribute to a common memory pool, enhancing collaborative abilities by integrating diverse experiences and knowledge.",
+          "citations": [],
+          "extension_suggestions": [
+            {
+              "text": "Memory Operation: Agents can acquire, accumulate, and utilize knowledge through interactions with their environment via various operations. These operations include memory reading, writing, reflection, and sharing. Memory reading involves extracting valuable information based on recency, relevance, and importance to enhance the agent’s actions [48, 50]. Memory writing focuses on storing perceived environmental information while managing duplication and preventing overflow [6]. Memory reflection enables agents to summarize and infer high-level insights from past experiences, facilitating more abstract and complex decision-making [50]. Memory sharing allows agents to access and contribute to a common memory pool. This enhances their collaborative abilities by integrating diverse experiences and knowledge [38, 51, 52]. In foundation-model-based agent systems, memory sharing involves storing and retrieving shared memories, which supports continuous learning and adaptation, helping agents use the most relevant information for tasks.",
+              "citation": "CIT022",
+              "relevance": 91,
+              "choosen": false,
+              "keep": true,
+              "Main Statement": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
